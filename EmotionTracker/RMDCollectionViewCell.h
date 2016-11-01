@@ -10,4 +10,8 @@
 
 @interface RMDCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong) UILabel *label;
+
+- (instancetype)initWithFrame:(CGRect)frame;
+
 @end
