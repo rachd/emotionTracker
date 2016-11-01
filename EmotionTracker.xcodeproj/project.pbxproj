@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		CC3176631DC82BFA00DB8096 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3176621DC82BFA00DB8096 /* main.m */; };
 		CC3176661DC82BFA00DB8096 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3176651DC82BFA00DB8096 /* AppDelegate.m */; };
-		CC3176691DC82BFA00DB8096 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3176681DC82BFA00DB8096 /* ViewController.m */; };
-		CC31766C1DC82BFA00DB8096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC31766A1DC82BFA00DB8096 /* Main.storyboard */; };
 		CC31766E1DC82BFA00DB8096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC31766D1DC82BFA00DB8096 /* Assets.xcassets */; };
 		CC3176711DC82BFA00DB8096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC31766F1DC82BFA00DB8096 /* LaunchScreen.storyboard */; };
 		CC31767A1DC831F000DB8096 /* RMDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3176791DC831F000DB8096 /* RMDCollectionViewCell.m */; };
+		CC3176831DC8BE1700DB8096 /* RMDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3176821DC8BE1700DB8096 /* RMDHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +20,13 @@
 		CC3176621DC82BFA00DB8096 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC3176641DC82BFA00DB8096 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC3176651DC82BFA00DB8096 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CC3176671DC82BFA00DB8096 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CC3176681DC82BFA00DB8096 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CC31766B1DC82BFA00DB8096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC31766D1DC82BFA00DB8096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC3176701DC82BFA00DB8096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC3176721DC82BFA00DB8096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC3176781DC831F000DB8096 /* RMDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDCollectionViewCell.h; sourceTree = "<group>"; };
 		CC3176791DC831F000DB8096 /* RMDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDCollectionViewCell.m; sourceTree = "<group>"; };
+		CC3176811DC8BE1700DB8096 /* RMDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDHomeViewController.h; sourceTree = "<group>"; };
+		CC3176821DC8BE1700DB8096 /* RMDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +61,10 @@
 			children = (
 				CC3176641DC82BFA00DB8096 /* AppDelegate.h */,
 				CC3176651DC82BFA00DB8096 /* AppDelegate.m */,
-				CC3176671DC82BFA00DB8096 /* ViewController.h */,
-				CC3176681DC82BFA00DB8096 /* ViewController.m */,
 				CC3176781DC831F000DB8096 /* RMDCollectionViewCell.h */,
 				CC3176791DC831F000DB8096 /* RMDCollectionViewCell.m */,
-				CC31766A1DC82BFA00DB8096 /* Main.storyboard */,
+				CC3176811DC8BE1700DB8096 /* RMDHomeViewController.h */,
+				CC3176821DC8BE1700DB8096 /* RMDHomeViewController.m */,
 				CC31766D1DC82BFA00DB8096 /* Assets.xcassets */,
 				CC31766F1DC82BFA00DB8096 /* LaunchScreen.storyboard */,
 				CC3176721DC82BFA00DB8096 /* Info.plist */,
@@ -145,7 +142,6 @@
 			files = (
 				CC3176711DC82BFA00DB8096 /* LaunchScreen.storyboard in Resources */,
 				CC31766E1DC82BFA00DB8096 /* Assets.xcassets in Resources */,
-				CC31766C1DC82BFA00DB8096 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,23 +153,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC31767A1DC831F000DB8096 /* RMDCollectionViewCell.m in Sources */,
-				CC3176691DC82BFA00DB8096 /* ViewController.m in Sources */,
 				CC3176661DC82BFA00DB8096 /* AppDelegate.m in Sources */,
 				CC3176631DC82BFA00DB8096 /* main.m in Sources */,
+				CC3176831DC8BE1700DB8096 /* RMDHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CC31766A1DC82BFA00DB8096 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC31766B1DC82BFA00DB8096 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CC31766F1DC82BFA00DB8096 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
