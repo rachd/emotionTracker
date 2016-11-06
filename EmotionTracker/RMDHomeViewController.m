@@ -9,7 +9,7 @@
 #import "RMDHomeViewController.h"
 #import "RMDCollectionViewCell.h"
 
-@interface RMDHomeViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface RMDHomeViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collection;
 @property (nonatomic, strong) NSArray *emotionsArray;
@@ -27,15 +27,19 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-   // UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-   // [flowLayout setItemSize:CGSizeMake(self.view.frame.size.width / 2 - 5, self.view.frame.size.height / 5)];
-   // [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-   // self.collection = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
-   // [self.view addSubview:self.collection];
-  //
-   // [self.collection registerClass:[RMDCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    [flowLayout setItemSize:CGSizeMake(self.view.frame.size.width / 2 - 5, self.view.frame.size.height / 5)];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    self.collection = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
+  
+    [self.collection registerClass:[RMDCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.collection.backgroundColor = [UIColor whiteColor];
+    self.collection.delegate = self;
+    self.collection.dataSource = self;
+    [self.view addSubview:self.collection];
+
     
-  //  self.emotionsArray = @[@"happy", @"sad"];
+    self.emotionsArray = @[@"Happy", @"Sad", @"Angry"];
 
 }
 
@@ -49,20 +53,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     RMDCollectionViewCell *cell = (RMDCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    switch (indexPath.row) {
-        case 0:
-            if (true) {
-                cell.label.text = @"Meow";
-            }
-            break;
-        case 1:
-            if (true) {
-                cell.label.text = @"Hisssss";
-            }
-            break;
-        default:
-            break;
-    }
+    cell.label.text = [self.emotionsArray objectAtIndex:indexPath.row];
     return cell;
 }
 
